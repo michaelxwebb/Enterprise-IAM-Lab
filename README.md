@@ -4,14 +4,14 @@
 The Enterprise IAM Lab was designed to demonstrate practical Identity and Access Management (IAM) skills by simulating an enterprise identity environment using Microsoft Entra ID P2. The lab implements RBAC, Conditional Access, Administrative Units, MFA, and Identity Governance to showcase how organizations enforce least privilege, secure user access, and support Zero Trust security principles.
 
 ### Skills Learned
-- Applying RBAC and Administrative Units to enforce least privilege for users.
-- Ability to automate group assignments for users through dynamic groups.
+- Applying RBAC and Administrative Units to enforce least privilege and delegated administration for users.
+- Automating user group assignments using Dynamic Groups.
 - Designing and implementing Conditional Access policies to restrict and grant access based off conditions.
-- Enhanced knowledge of Identity Governance concepts, including access reviews, and privileged access management.
-- Development of critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
+- Practical experience with Identity Governance concepts, including Access Reviews and Privileged Identity Management (PIM).
+- Strenghtened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
-- Microsoft Entra ID P2 for implementing RBAC, Conditional Access, MFA, and Administrative Units.
+- Microsoft Entra ID P2 for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
 - Microsoft Authenticator and Temporary Access Pass for MFA enrollment and authentication recovery.
 - Microsoft Azure Portal for tenant administration and identity configuration.
 - Access Reviews and Entitlement Management to simulate identity governance workflows
@@ -19,28 +19,43 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 ## Steps
 
 ### Step 1: Create Users
-- In this step I created multiple users in the environment, both members and guest and assigned them to different departments so I could later assign roles, and access based on their relationship in the company.
+- Created member and guest accounts representing different departments and roles within the organization. These users serve as the foundation for implementing RBAC, Conditional Access, and Identity Governance throughout the lab.
 <img width="1919" height="1079" alt="Screenshot 2026-06-15 171101" src="https://github.com/user-attachments/assets/3bf31f89-ab00-474d-b8bf-aecd0c0db023" />
 
 ### Step 2: Create Groups
-- I then assigned users to distinct security groups depending on their department. To increase productivity I made dynamic groups to create automated group assignment based on specific constraints. For this specific project the user got assigned to the group based on what department they were in.
-- Example: S.Jones (HR Admin) and E.Carter (HR user) were assigned to the HR Users group
+- Department based security groups were created and dynamic groups were implemented to automate user assignments based on department attributes. The addition of dynamic groups reduced administrative overhead and ensured users were automatically placed into the correct groups as their attributes change.
+- Example: S.Jones (HR Admin) and E.Carter (HR user) were assigned to the HR Users group based on their department attribute.
  <img width="1915" height="1079" alt="Screenshot 2026-06-15 171210" src="https://github.com/user-attachments/assets/42adfcc6-29fa-412d-b90c-95e521d384db" />
  <img width="1919" height="1079" alt="Screenshot 2026-06-15 171152" src="https://github.com/user-attachments/assets/3d9bf8b0-cd18-4d2e-bad1-dd327182e6cf" />
 
 ### Step 3: Administrative Units
-- In this Lab every admin in each department was given the User Administrator role. To practice least privilege I created administrative units to narrow the scope of those Admin roles to each Admin users respective department.
-- To test the effects of the adminstrative unit I tried to change E.Carter (HR User) and L.Brown (Finance User), using S.Jones' (HR Admin) User Authenticator role. Because of the administrator unit S.Jones was only able to change E.Carter's password because that user is also in the HR department.
+- Implemented Administrative Units to enforce delegated administration and least privilege. Even though each departments Admin was assigned the User Authenticator role, they were scoped only to users within their respective departments.
+- To test the configuration, I attempted to reset passwords for both E.Carter (HR User) and L.Brown (Finance User) while signed in as S.Jones (HR Admin). The password reset succeeded for E.Carter but failed for L.Brown, demonstrating that Administrative Units administrative permissions were effectively limited to only the HR department.
   <img width="1912" height="1079" alt="Screenshot 2026-06-15 181404" src="https://github.com/user-attachments/assets/4c81ded6-921f-4a71-856b-b6d22c0466de" />
   <img width="1919" height="1079" alt="Screenshot 2026-06-15 181428" src="https://github.com/user-attachments/assets/3582299d-2bd1-4f12-a4ef-343d5d83323c" />
 
 ### Step 4: RBAC
-- Because I had different users with different roles within the company, I needed to ensure that each users access level was determined by that role. Each Admin user for their respective department was given a User administrator role to only manage the users in their departments. The admininstrative units that were mentioned previously allowed for delegated administration, ensuring the users only received permissions necessary to perform their responsibilities.
-- In the screenshot below, M.Webbs' (IT admin) roles are shown. Because they are the creator of the tenant they were automatically assigned the Global Admin role alonside the User Admin role. Additionally the user was given the Authentication Admin role because they serve as the IAM team for the project, managing users, MFA, and authentication methods for the whole tenant.
+- Implemented RBAC to ensure each user's permissions aligned with their responsibilities. Department Admins were assigned the User Administrator role, while Administrative Units restricted their authority to their respective departments.
+- In the screenshot below, M.Webbs' (IT admin) is shown with multiple roles. Because this account created the tenant, it was automatically assigned the Global Administrator role. Additionally, the account was given the User Administator and Authentication Administrator roles to simulate and IAM team responsible for managing users, MFA, and authentication methods across the entire tenant.
  <img width="1919" height="1079" alt="Screenshot 2026-06-15 171714" src="https://github.com/user-attachments/assets/e6fb7bb3-7e8b-4a8b-8c91-38ca5a02127e" />
  
 ### Step 5: Authentication & MFA
+- Implemented phishing-resistant MFA for admins and required MFA enrollment for all users in the tenant to strenghten authenticaton security.
+- To test the configuration, I signed in as S.Jones (HR Admin) and confirmed the user was prompted to register and complete MFA enrollment before gaining access.
+  <img width="1910" height="1078" alt="Screenshot 2026-06-15 180330" src="https://github.com/user-attachments/assets/c8399242-ac13-4038-ab99-78cc580443f2" />
+
 ### Step 6: Conditional Access
+- Implemented Conditional Access policies to strenghten access security and support Zero Trust principles.
+- I configured the following policies:
+   - Require MFA for all admin accounts
+   - Block legacy authentication protocols that don't support MFA
+   - Block access from login attempts outside of trusted locations
+   - Restrict guest and contractor accounts from accessing adminstrative functions
+- To test thes conditions, I attempted to view Microsoft Entra admin roles within the admin center while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from adminstrative functions.
+<img width="1919" height="1077" alt="Screenshot 2026-06-15 174958" src="https://github.com/user-attachments/assets/7666b36b-848f-4538-aa1d-20df2170f7c0" />
+<img width="1914" height="1079" alt="Screenshot 2026-06-15 181012" src="https://github.com/user-attachments/assets/ea9e30b7-88e8-4b81-8d12-ab13e6a160ca" />
+
+
 ### Step 7: Identity Governance
 ### Step 8: Excessive Permission Simulation
 ### Step 9: Entitlement Management
