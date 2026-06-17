@@ -36,7 +36,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 
 ### Step 4: RBAC
 - Implemented RBAC to ensure each user's permissions aligned with their responsibilities. Department Admins were assigned the User Administrator role, while Administrative Units restricted their authority to their respective departments.
-- In the screenshot below, M.Webbs' (IT admin) is shown with multiple roles. Because this account created the tenant, it was automatically assigned the Global Administrator role. Additionally, the account was given the User Administator and Authentication Administrator roles to simulate and IAM team responsible for managing users, MFA, and authentication methods across the entire tenant.
+- In the screenshot below, M.Webbs' (IT admin) is shown with multiple roles. Because this account created the tenant, it was automatically assigned the Global Administrator role. Additionally, the account was given the User Administator and Authentication Administrator roles to simulate an IAM team responsible for managing users, MFA, and authentication methods across the entire tenant.
  <img width="1919" height="1079" alt="Screenshot 2026-06-15 171714" src="https://github.com/user-attachments/assets/e6fb7bb3-7e8b-4a8b-8c91-38ca5a02127e" />
  
 ### Step 5: Authentication & MFA
@@ -51,7 +51,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
    - Block legacy authentication protocols that don't support MFA
    - Block access from login attempts outside of trusted locations
    - Restrict guest and contractor accounts from accessing adminstrative functions
-- To test thes conditions, I attempted to view Microsoft Entra admin roles within the admin center while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from adminstrative functions.
+- To test these conditions, I attempted to view Microsoft Entra admin roles within the Entra admin center while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from adminstrative functions.
 <img width="1919" height="1077" alt="Screenshot 2026-06-15 174958" src="https://github.com/user-attachments/assets/7666b36b-848f-4538-aa1d-20df2170f7c0" />
 <img width="1914" height="1079" alt="Screenshot 2026-06-15 181012" src="https://github.com/user-attachments/assets/ea9e30b7-88e8-4b81-8d12-ab13e6a160ca" />
 
