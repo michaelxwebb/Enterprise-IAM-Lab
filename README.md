@@ -1,4 +1,4 @@
-# Enterprise IAM Lab (In Progress)
+# Enterprise IAM Lab 
 
 ## Objective
 The Enterprise IAM Lab was designed to demonstrate practical Identity and Access Management (IAM) skills by simulating an enterprise identity environment using Microsoft Entra ID P2. The lab implements RBAC, Conditional Access, Administrative Units, MFA, and Identity Governance to showcase how organizations enforce least privilege, secure user access, and support Zero Trust security principles.
@@ -7,14 +7,14 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - Applying RBAC and Administrative Units to enforce least privilege and delegated administration for users.
 - Automating user group assignments using Dynamic Groups.
 - Designing and implementing Conditional Access policies to restrict and grant access based off conditions.
-- Practical experience with Identity Governance concepts, including Access Reviews and Privileged Identity Management (PIM).
+- Practical experience with Identity Governance concepts, including Access Reviews and Entitlement Managment.
 - Strenghtened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
 - Microsoft Entra ID P2 for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
-- Microsoft Authenticator and Temporary Access Pass for MFA enrollment and authentication recovery.
+- Microsoft Authenticator for MFA enrollment and authentication security.
 - Microsoft Azure Portal for tenant administration and identity configuration.
-- Access Reviews and Entitlement Management to simulate identity governance workflows
+- Access Reviews and Entitlement Management to simulate identity governance workflows.
 
 ## Steps
 
@@ -26,7 +26,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 
 ### Step 2: Create Groups
 - Department based security groups were created and dynamic groups were implemented to automate user assignments based on department attributes. The addition of dynamic groups reduced administrative overhead and ensured users were automatically placed into the correct groups as their attributes change.
-- The second screenshot shows and example where, S.Jones (HR Admin) and E.Carter (HR user) were assigned to the HR Users group based on their department attribute.
+- The second screenshot shows an example where, S.Jones (HR Admin) and E.Carter (HR user) were assigned to the HR Users group based on their department attribute.
   
  <img width="1915" height="1079" alt="Screenshot 2026-06-15 171210" src="https://github.com/user-attachments/assets/42adfcc6-29fa-412d-b90c-95e521d384db" />
  <img width="1919" height="1079" alt="Screenshot 2026-06-15 171152" src="https://github.com/user-attachments/assets/3d9bf8b0-cd18-4d2e-bad1-dd327182e6cf" />
@@ -61,8 +61,8 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
    - Block legacy authentication protocols that don't support MFA
    - Block access from login attempts outside of trusted locations
    - Restrict guest and contractor accounts from accessing adminstrative functions
-- To test these conditions, I attempted to view Microsoft Entra admin roles within the Entra admin center while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from adminstrative functions.
-  
+ - As shown in the second screenshot below, I validated these controls by attempting to view Microsoft Entra administrative roles while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from administrative functions.
+ 
 <img width="1919" height="1077" alt="Screenshot 2026-06-15 174958" src="https://github.com/user-attachments/assets/7666b36b-848f-4538-aa1d-20df2170f7c0" />
 <img width="1914" height="1079" alt="Screenshot 2026-06-15 181012" src="https://github.com/user-attachments/assets/ea9e30b7-88e8-4b81-8d12-ab13e6a160ca" />
 
@@ -72,13 +72,14 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - To resolve the issue, I created an Access Review for the HR Users group to identify and evaluate excessive permissions. The review flagged the innapropiate role assignment, and the Authentication Administrator role was removed and S.Jones privileges were set back to their properly scoped administrative role.
   
 <img width="1646" height="562" alt="Screenshot 2026-06-17 181705" src="https://github.com/user-attachments/assets/d958edf0-b59d-41a7-a562-67db1d72e92f" />
-                        <img width="437" height="290" alt="Screenshot 2026-06-17 181745" src="https://github.com/user-attachments/assets/dc8b2309-72cb-4311-9733-cffe4c90a9e9" />
+<img width="1917" height="334" alt="Screenshot 2026-06-17 205435" src="https://github.com/user-attachments/assets/8851fa91-69e6-45ad-bf37-8472b33a669e" />
+
 
 
 ### Step 8: Entitlement Management
 - To conclude the lab, I implemented an Entitlement Management scenario where A.Lee (Contractor) requested an Access Package granting access to Finance department applications. Requests required approval from J.Smith (Finance Admin). Two scenarios were created to demonstrate when access should and shouldn't be granted.
 ### Scenario 1: Access Denied
-   - In this scenario A.Lee requested access to Finance applications without providing a legitmiate business justification. The request was denied by J.Smith demonstrating the principles of least privilege and preventing unnecessary access to sensitive resoureces.
+   - In this scenario A.Lee requested access to Finance applications without providing a legitmiate business justification. The request was denied by J.Smith demonstrating the principles of least privilege and preventing unnecessary access to sensitive resources.
 
 
    <img width="1917" height="899" alt="Screenshot 2026-06-17 190722" src="https://github.com/user-attachments/assets/b4bcdbf2-1bf0-4583-9389-da5fbbe36e2e" />
