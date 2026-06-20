@@ -63,7 +63,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
    - Restrict guest and contractor accounts from accessing adminstrative functions
  - As shown in the second screenshot below, I validated these controls by attempting to view Microsoft Entra administrative roles while signed in as A.Lee (Contractor). Access was denied, confirming that guest users were successfully restricted from administrative functions.
  
-<img width="1919" height="1077" alt="Screenshot 2026-06-15 174958" src="https://github.com/user-attachments/assets/7666b36b-848f-4538-aa1d-20df2170f7c0" />
+<img width="1919" height="1037" alt="Screenshot 2026-06-15 174958" src="https://github.com/user-attachments/assets/ae608113-718d-4fd4-bafe-50812aec45e6" />
 <img width="1914" height="1079" alt="Screenshot 2026-06-15 181012" src="https://github.com/user-attachments/assets/ea9e30b7-88e8-4b81-8d12-ab13e6a160ca" />
 
 
