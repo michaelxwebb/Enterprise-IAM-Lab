@@ -68,7 +68,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 
 
 ### Step 7: Identiy Goverance / Excessive Permission Simulation
-- To demonstrate Identity Governance workflows, I simulated a scenario where S.Jones (HR Admin) was accidentally assigned the Authentication Administrator role, granting them tenant wide authentication privileges. This role assignment violated principles of least privilege aand separation of duties by providing excessive access outside the user's job responsibilities.
+- To demonstrate Identity Governance workflows, I simulated a scenario where S.Jones (HR Admin) was accidentally assigned the Authentication Administrator role, granting them tenant wide authentication privileges. This role assignment violated principles of least privilege and separation of duties by providing excessive access outside the user's job responsibilities.
 - To resolve the issue, I created an Access Review for the HR Users group to identify and evaluate excessive permissions. The review flagged the innapropiate role assignment, and the Authentication Administrator role was removed and S.Jones privileges were set back to their properly scoped administrative role.
   
 <img width="1646" height="562" alt="Screenshot 2026-06-17 181705" src="https://github.com/user-attachments/assets/d958edf0-b59d-41a7-a562-67db1d72e92f" />
