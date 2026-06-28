@@ -11,10 +11,10 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - Strengthened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
-- Microsoft Entra ID P2 for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
-- Microsoft Authenticator for MFA enrollment and authentication security.
-- Microsoft Azure Portal for tenant administration and identity configuration.
-- Access Reviews and Entitlement Management to simulate identity governance workflows.
+- *Microsoft Entra ID P2* for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
+- *Microsoft Authenticator* for MFA enrollment and authentication security.
+- *Microsoft Azure Portal* for tenant administration and identity configuration.
+- *Access Reviews* and *Entitlement Management* to simulate identity governance workflows.
 
 ## Steps
 
@@ -78,13 +78,14 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 
 ### Step 8: Entitlement Management
 - To conclude the lab, I implemented an Entitlement Management scenario where A.Lee (Contractor) requested an Access Package granting access to Finance department applications. Requests required approval from J.Smith (Finance Admin). Two scenarios were created to demonstrate when access should and shouldn't be granted.
-### Scenario 1: Access Denied
+  
+**Scenario 1: Access Denied**
    - In this scenario A.Lee requested access to Finance applications without providing a legitmiate business justification. The request was denied by J.Smith demonstrating the principles of least privilege and preventing unnecessary access to sensitive resources.
 
 
    <img width="1917" height="899" alt="Screenshot 2026-06-17 190722" src="https://github.com/user-attachments/assets/b4bcdbf2-1bf0-4583-9389-da5fbbe36e2e" />
 
-### Scenario 2: Temporary Access Granted
+**Scenario 2: Temporary Access Granted**
    - In the second scenario A.Lee requested temporary access to the Finance applications due to a change in job responsibilities requiring collaboration with the Finance department. Because the request included a valid business justification, J.Smith approved the request and A.Lee was temporarily assigned to the Finance Users group while retaining guest user status. This scenario demonstrated how Entitlement Management allows organizations to balance security with operational needs by providing time-bound access via approval and business justification.
 
   <img width="1649" height="503" alt="Screenshot 2026-06-17 192114" src="https://github.com/user-attachments/assets/069902e1-ee68-42ec-9dd3-faabb70fde8d" />
