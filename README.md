@@ -8,7 +8,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - Automating user group assignments using Dynamic Groups.
 - Designing and implementing Conditional Access policies to restrict and grant access based off conditions.
 - Practical experience with Identity Governance concepts, including Access Reviews and Entitlement Managment.
-- Strenghtened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
+- Strengthened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
 - Microsoft Entra ID P2 for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
