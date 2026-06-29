@@ -7,7 +7,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - Applying RBAC and Administrative Units to enforce least privilege and delegated administration for users.
 - Automating user group assignments using Dynamic Groups.
 - Designing and implementing Conditional Access policies to restrict and grant access based off conditions.
-- Practical experience with Identity Governance concepts, including Access Reviews and Entitlement Managment.
+- Practical experience with Identity Governance concepts, including Access Reviews and Entitlement Management.
 - Strengthened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
@@ -42,20 +42,20 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 
 ### Step 4: RBAC
 - Implemented RBAC to ensure each user's permissions aligned with their responsibilities. Department Admins were assigned the User Administrator role, while Administrative Units restricted their authority to their respective departments.
-- In the screenshot below, M.Webbs' (IT admin) is shown with multiple roles. Because this account created the tenant, it was automatically assigned the Global Administrator role. Additionally, the account was given the User Administator and Authentication Administrator roles to simulate an IAM team responsible for managing users, MFA, and authentication methods across the entire tenant.
+- In the screenshot below, M.Webbs' (IT Admin) is shown with multiple roles. Because this account created the tenant, it was automatically assigned the Global Administrator role. Additionally, the account was given the User Administator and Authentication Administrator roles to simulate an IAM team responsible for managing users, MFA, and authentication methods across the entire tenant.
   
  <img width="1919" height="1079" alt="Screenshot 2026-06-15 171714" src="https://github.com/user-attachments/assets/e6fb7bb3-7e8b-4a8b-8c91-38ca5a02127e" />
 
  
 ### Step 5: Authentication & MFA
-- Implemented phishing-resistant MFA for admins and required MFA enrollment for all users in the tenant to strenghten authenticaton security.
+- Implemented phishing-resistant MFA for admins and required MFA enrollment for all users in the tenant to strengthen authentication security.
 - To test the configuration, I signed in as S.Jones (HR Admin) and confirmed the user was prompted to register and complete MFA enrollment before gaining access.
   
   <img width="1910" height="1078" alt="Screenshot 2026-06-15 180330" src="https://github.com/user-attachments/assets/c8399242-ac13-4038-ab99-78cc580443f2" />
 
 
 ### Step 6: Conditional Access
-- Implemented Conditional Access policies to strenghten access security and support Zero Trust principles.
+- Implemented Conditional Access policies to strengthen access security and support Zero Trust principles.
 - I configured the following policies:
    - Require MFA for all admin accounts
    - Block legacy authentication protocols that don't support MFA
