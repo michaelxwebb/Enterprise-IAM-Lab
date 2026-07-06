@@ -1,7 +1,7 @@
 # Enterprise IAM Lab 
 
 ## Objective
-The Enterprise IAM Lab was designed to demonstrate practical Identity and Access Management (IAM) skills by simulating an enterprise identity environment using Microsoft Entra ID P2. The lab implements RBAC, Conditional Access, Administrative Units, MFA, and Identity Governance to showcase how organizations enforce least privilege, secure user access, and support Zero Trust security principles.
+The Enterprise IAM Lab was designed to demonstrate practical Identity and Access Management (IAM) skills by simulating an enterprise identity environment using Microsoft Entra ID. The lab implements RBAC, Conditional Access, Administrative Units, MFA, and Identity Governance to showcase how organizations enforce least privilege, secure user access, and support Zero Trust security principles.
 
 ### Skills Learned
 - Applying RBAC and Administrative Units to enforce least privilege and delegated administration for users.
@@ -11,7 +11,7 @@ The Enterprise IAM Lab was designed to demonstrate practical Identity and Access
 - Strengthened critical thinking and problem-solving skills through designing security controls and troubleshooting identity and access scenarios.
 
 ### Tools Used
-- *Microsoft Entra ID P2* for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
+- *Microsoft Entra ID* for implementing RBAC, Conditional Access, MFA, Identity Governance and Administrative Units.
 - *Microsoft Authenticator* for MFA enrollment and authentication security.
 - *Microsoft Azure Portal* for tenant administration and identity configuration.
 - *Access Reviews* and *Entitlement Management* to simulate identity governance workflows.
